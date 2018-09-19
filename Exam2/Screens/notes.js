@@ -4,23 +4,39 @@ import {
     Text,
     StyleSheet,
     TouchableOpacity,
+    CheckBox
 } from 'react-native';
 
 
 
+
 export default class notes extends Component {
+    constructor(){
+        super();
+        this.state={
+            check:false
+        }
+    }
+
+    checkBoxFunc(){
+        this.setState({
+            check:!this.state.check
+        })
+
+        alert("Value Changed!!")
+    }
     render() {
         return (
             <View key={this.props.keyval} style={styles.note}>
                 <Text style={styles.noteText}>{this.props.val.date}</Text>
                 <Text style={styles.noteText}>{this.props.val.note}</Text>
-                <TouchableOpacity onPress={this.props.checkMethod} style={styles.noteCheck}>
-                    <Text style={styles.noteDeleteText}>Check</Text>
-                </TouchableOpacity>       
+                <CheckBox value={this.state.check} onChange={()=>this.checkBoxFunc()}/>    
             </View>
         );
     }
 }
+
+
 const styles = StyleSheet.create({
     note: {
         position: 'relative',
