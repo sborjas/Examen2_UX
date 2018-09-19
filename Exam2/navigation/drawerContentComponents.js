@@ -46,7 +46,7 @@ export default class drawerContentComponents extends React.Component {
 const styles = StyleSheet.create({
     container: {
         paddingTop: 20,
-        backgroundColor:'#082EAF',
+        backgroundColor:'#637B80',
         height: '100%'
     },
     headerContainer: {
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
     },
     headerStyle:{
         height: 220,
-        backgroundColor: '#082EAF'
+        backgroundColor: '#637B80'
     },
 
 });

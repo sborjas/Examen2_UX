@@ -9,7 +9,7 @@ export default class doneTask extends React.Component {
     render(){
         return(
             <Container>
-                <Header style={styles.headerStyle}>
+                <Header style={styles.header}>
                 <Body>
                     <Title>Done Tasks</Title>
                 </Body>
@@ -29,12 +29,30 @@ export default class doneTask extends React.Component {
 
 const styles = StyleSheet.create({
     container: {
-      flex: 1,
-      
-      alignItems: 'center',
-      justifyContent: 'center',
+        flex: 1,
     },
-    headerStyle: {
-        backgroundColor: '#082EAF'
-    }
-  });
+    header: {
+        backgroundColor: '#637B80',
+        alignItems: 'center',
+        justifyContent:'center',
+        borderBottomWidth: 10,
+        borderBottomColor: '#ddd'
+    },
+    headerText: {
+        color: 'white',
+        fontSize: 18,
+        padding: 26
+    },
+    scrollContainer: {
+        flex: 1,
+        marginBottom: 100
+    },
+    footer: {
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        right: 0,
+        zIndex: 10
+    },
+
+});

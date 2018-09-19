@@ -23,8 +23,10 @@ export default class todoTask extends React.Component {
                     />
         })
         return(
+
+            <KeyboardAvoidingView style={styles.container} behavior="padding">
             <Container>
-                <Header style={styles.headerStyle}>
+                <Header style={styles.header}>
                 <Body>
                     <Title>Todo Tasks</Title>
                 </Body>
@@ -47,13 +49,10 @@ export default class todoTask extends React.Component {
                 <TouchableOpacity onPress={ this.addNote.bind(this) } style={styles.addButton}>
                     <Text style={styles.addButtonText}>+</Text>
                 </TouchableOpacity>
-                
 
-                
-        
-                
 
-            </Container>      
+            </Container>    
+            </KeyboardAvoidingView>  
             
             
         )
@@ -96,7 +95,7 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     header: {
-        backgroundColor: '#E91E63',
+        backgroundColor: '#637B80',
         alignItems: 'center',
         justifyContent:'center',
         borderBottomWidth: 10,
@@ -131,7 +130,7 @@ const styles = StyleSheet.create({
         zIndex: 11,
         right: 20,
         bottom: 90,
-        backgroundColor: '#E91E63',
+        backgroundColor: '#637B80',
         width: 70,
         height: 70,
         borderRadius: 25,

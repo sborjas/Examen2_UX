@@ -9,10 +9,6 @@ import {
 
 
 export default class notes extends Component {
-
-    
-
-      
     render() {
         return (
             <View key={this.props.keyval} style={styles.note}>
@@ -57,7 +53,7 @@ const styles = StyleSheet.create({
         padding: 10,
         top: 10,
         bottom: 10,
-        right: 40
+        right: 20
     },
     noteDeleteText: {
         color: 'white'
